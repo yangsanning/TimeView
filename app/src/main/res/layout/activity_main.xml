@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/main_activity_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="输入json文本"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/main_activity_last_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:hint="输入昨日收盘价"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/main_activity_confirm"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:onClick="confirm"
+            android:text="生成分时线"
+            android:gravity="center"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ysn.com.timeview.view.TimeView
+        android:id="@+id/main_activity_time_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp" />
+</LinearLayout>
